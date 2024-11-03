@@ -8,10 +8,8 @@ public class Main {
         int sum = 0;
         int amount = 15000;
         int month = 0;
-        double percent = 1D / 100;
-        while (sum < desiredSum){
+        while (sum <= desiredSum){
             sum += amount;
-            sum = (int) (sum * (1 + percent));
             month ++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
@@ -38,14 +36,14 @@ public class Main {
         int mortalityPerThousand = 8;
         int currentYear = 2024;
         for (int year = currentYear; year < currentYear +10; year ++){
-            population += population * fertilityPerThousand / 100 -population * mortalityPerThousand / 100;
+            population += population * fertilityPerThousand / 1000 - population * mortalityPerThousand / 1000;
             System.out.println("Год " + year + ", численность населения состовляет " + population);
         }
 
         // task 4
         System.out.println("task 4");
 
-        percent = 7D / 100;
+        double percent = 7D / 100;
         desiredSum = 12_000_000;
         sum = amount;
         month = 0;
