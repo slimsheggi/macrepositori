@@ -3,17 +3,6 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        int [] weights = new int []{90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
-        weights [0] = 90;
-        int januaryWeight = weights [0];
-        System.out.println(januaryWeight);
-        System.out.println(weights[4]);
-        int january = 0;
-        System.out.println(weights[january]);
-        for (int i = 0; i < weights.length; i++) {
-            System.out.println(weights[i]);
-        }
-
         // task 1
         System.out.println("task 1");
 
@@ -21,21 +10,13 @@ public class Main {
         numbers [0] = 1;
         numbers [1]= 2;
         numbers [2] = 3;
-        System.out.println(numbers [0]);
-        System.out.println(numbers [1]);
-        System.out.println(numbers [2]);
+        System.out.println(Arrays.toString(numbers));
 
         double[] fractionalNumbers = {1.57, 7.654, 9.986};
-        System.out.println(fractionalNumbers [0]);
-        System.out.println(fractionalNumbers [1]);
-        System.out.println(fractionalNumbers [2]);
+        System.out.println(Arrays.toString(fractionalNumbers));
 
         int [] arbitraryArray = new int []{9, 7, 5, 3, 1};
-        System.out.println(arbitraryArray [0]);
-        System.out.println(arbitraryArray [1]);
-        System.out.println(arbitraryArray [2]);
-        System.out.println(arbitraryArray [3]);
-        System.out.println(arbitraryArray [4]);
+        System.out.println(Arrays.toString(arbitraryArray));
 
         // task 2
         System.out.println("task 2");
@@ -47,9 +28,29 @@ public class Main {
         // task 3
         System.out.println("task 3");
 
-        System.out.println(numbers [2] + "," + numbers [1] + "," + numbers [0]);
-        System.out.println(fractionalNumbers [2] + "," + fractionalNumbers [1] + "," + fractionalNumbers [0]);
-        System.out.println(arbitraryArray [4] + "," + arbitraryArray [3] + "," + arbitraryArray [2] + "," + arbitraryArray [1] + "," + arbitraryArray [0]);
+        for (int i = 2; i < numbers.length; i--){
+            if (i >= 1){
+                System.out.println(numbers[i] + ", ");
+            } else if (i == 0){
+                System.out.println(numbers[i]);
+            }
+        }
+
+        for (int i = 2; i < fractionalNumbers.length; i--){
+            if (i >= 1){
+                System.out.println(fractionalNumbers[i] + ", ");
+            } else if (i == 0){
+                System.out.println(fractionalNumbers[i]);
+            }
+        }
+
+        for (int i = 4; i < arbitraryArray.length; i--){
+            if (i >= 1){
+                System.out.println(arbitraryArray[i] + ", ");
+            } else if (i == 0){
+                System.out.println(arbitraryArray[i]);
+            }
+        }
 
         // task 4
         System.out.println("task 4");
