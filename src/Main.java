@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         printIsLeapYear(2016);
-        recommendAppLocationVersion(0, 2016);
+        recommendAppLocationVersion(1, 2014);
         calculateDeliveryDays(30);
     }
 
@@ -25,18 +25,15 @@ public class Main {
     }
 
     public static void recommendAppLocationVersion(int clientOS, int deviceYear) {
-        boolean deviceIsOld = isDeviceOld(deviceYear);
-        System.out.println("Устаеовите ");
-        if (deviceIsOld) {
-            System.out.println("Lite");
+        if (deviceYear <= 2014){
+        System.out.println("Установите Lite версию");
+        } else {
+            System.out.println("Установите Classic версию");
         }
-        System.out.println("версию для");
         if (clientOS == 0) {
-            System.out.println("IOS ");
+            System.out.println("IOS");
         } else if (clientOS == 1) {
             System.out.println("Android");
-        } else {
-            throw new RuntimeException("Неизвестная система");
         }
     }
 
